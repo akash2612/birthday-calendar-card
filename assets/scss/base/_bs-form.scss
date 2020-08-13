@@ -1,0 +1,40 @@
+// bs-form
+.bs-form {
+    .left-wrap {
+        width: 70rem;
+    }
+    .right-wrap {
+        width: 42rem;
+        .form-group {
+            margin-bottom: 3.5rem;
+        }
+    }
+    .form-group {
+        .input-label {
+            display: block;
+            color: #485764;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+            font-weight: $font-semibold;
+        }
+        .form-control {
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            background-color: $clr-white;
+            padding: 2rem 1.5rem;
+            height: auto;
+            width: 32rem;
+        }
+        textarea {
+            &.form-control {
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                height: 40rem;
+                width: 100%;
+            }
+        }
+    }
+}

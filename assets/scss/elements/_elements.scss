@@ -1,0 +1,52 @@
+/* element.scss */
+
+* {
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    line-height: initial;
+    font-family: 'Montserrat', sans-serif;
+    background: $clr-bg;
+    color: $clr-base;
+    font-weight: $font-regular;
+}
+
+h1,
+h2,
+h3,
+h4.h5 {
+    margin: 0;
+}
+
+p {}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}

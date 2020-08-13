@@ -1,0 +1,14 @@
+// btn
+.btn {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    &.btn-default {
+        color: $clr-white;
+        background-color: $clr-default;
+        border-radius: 0.5rem;
+        padding: 1.8rem 2rem;
+        min-width: 17.5rem;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+    }
+}

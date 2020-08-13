@@ -1,0 +1,383 @@
+/*
+  @Author : Akash
+  @Project : Birthday Calendar
+*/
+/* config */
+/* config */
+/* breakpoints */
+/* element */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/* element.scss */
+* {
+  outline: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  line-height: initial;
+  font-family: 'Montserrat', sans-serif;
+  background: #eaf1f3;
+  color: #000000;
+  font-weight: 400; }
+
+h1,
+h2,
+h3,
+h4.h5 {
+  margin: 0; }
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none; }
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+button {
+  background: transparent;
+  box-shadow: none;
+  border: none; }
+  button:focus {
+    outline: none;
+    box-shadow: none; }
+
+/* base include */
+.bs-card .card-head {
+  background: #9a88ea;
+  color: #dbd4f7;
+  padding: 1.2rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem; }
+  .bs-card .card-head .text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    display: block;
+    text-align: right;
+    font-weight: 600; }
+.bs-card .card-body {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  width: 16rem;
+  height: 16rem;
+  overflow-y: auto;
+  position: relative; }
+  .bs-card .card-body .name-tile {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 25%;
+    min-height: 25%;
+    float: left; }
+
+.bs-form .left-wrap {
+  width: 70rem; }
+.bs-form .right-wrap {
+  width: 42rem; }
+  .bs-form .right-wrap .form-group {
+    margin-bottom: 3.5rem; }
+.bs-form .form-group .input-label {
+  display: block;
+  color: #485764;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600; }
+.bs-form .form-group .form-control {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  padding: 2rem 1.5rem;
+  height: auto;
+  width: 32rem; }
+.bs-form .form-group textarea.form-control {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  height: 40rem;
+  width: 100%; }
+
+.btn {
+  font-size: 1.6rem;
+  line-height: 1.8rem; }
+  .btn.btn-default {
+    color: #ffffff;
+    background-color: #1b86ef;
+    border-radius: 0.5rem;
+    padding: 1.8rem 2rem;
+    min-width: 17.5rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+
+/* layout */
+.lyt-main {
+  padding: 7rem 5rem;
+  max-width: 128rem;
+  margin: 0 auto; }
+  .lyt-main .pg-title {
+    font-size: 3rem;
+    line-height: 3.4rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+    text-align: center; }
+  .lyt-main .card-wrap {
+    margin-bottom: 4.5rem; }
+    .lyt-main .card-wrap .card-list {
+      display: flex;
+      justify-content: space-between; }
+      .lyt-main .card-wrap .card-list .card-item {
+        order: 0; }
+        .lyt-main .card-wrap .card-list .card-item:first-child {
+          order: 1; }
+        .lyt-main .card-wrap .card-list .card-item.blank .card-body {
+          background-color: #dee5e7; }
+          .lyt-main .card-wrap .card-list .card-item.blank .card-body:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url("../images/sad.png") center center no-repeat;
+            z-index: 1;
+            background-size: cover;
+            width: 3rem;
+            height: 3rem; }
+  .lyt-main .bs-form {
+    display: flex;
+    justify-content: space-between; }
+
+/*# sourceMappingURL=custom.css.map */

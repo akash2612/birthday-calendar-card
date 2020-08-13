@@ -1,0 +1,38 @@
+// bs-card
+.bs-card {
+    .card-head {
+        background: #9a88ea;
+        color: $clr-base-light;
+        padding: 1.2rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        .text {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            display: block;
+            text-align: right;
+            font-weight: $font-semibold;
+        }
+    }
+    .card-body {
+        border: 1px solid #ccc;
+        background-color: $clr-white;
+        width: 16rem;
+        height: 16rem;
+        overflow-y: auto;
+        position: relative;
+        .name-tile {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $clr-white;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 25%;
+            min-height: 25%;
+            float: left;
+        }
+    }
+}

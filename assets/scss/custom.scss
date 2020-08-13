@@ -1,0 +1,29 @@
+/*
+  @Author : Akash
+  @Project : Birthday Calendar
+*/
+
+
+/* config */
+
+// @import "fonts/font";
+
+/* config */
+
+@import "config/variables";
+
+/* element */
+
+@import "elements/reset";
+@import "elements/normalize";
+@import "elements/elements";
+
+/* base include */
+
+@import "base/bs-card";
+@import "base/bs-form";
+@import "base/btn";
+
+/* layout */
+
+@import "layout/lyt-main";
