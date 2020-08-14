@@ -24,6 +24,7 @@ function processData(dt, yr) {
         groupByDay(filteredData, 'day');
         return true;
     } catch (error) {
+        console.log(error);
         alert("Invalid Data!!!");
     }
 }
