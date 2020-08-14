@@ -42,10 +42,11 @@ function sortByAge(objArr) {
 function getInitials(name) {
     let initialsArr = name.split(" ");
     let arrLen = initialsArr.length;
+    let nameInitials = '';
     if (arrLen > 1) {
-        let nameInitials = initialsArr[0].charAt(0) + initialsArr[arrLen - 1].charAt(0);
+        nameInitials = initialsArr[0].charAt(0) + initialsArr[arrLen - 1].charAt(0);
     } else {
-        let nameInitials = initialsArr[0].charAt(0);
+        nameInitials = initialsArr[0].charAt(0);
     }
 
     return nameInitials;
